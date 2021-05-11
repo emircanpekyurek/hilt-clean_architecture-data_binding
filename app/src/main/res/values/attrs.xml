@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="itemVerticalTitleColor" format="color" />
+    <attr name="itemVerticalSubTitleColor" format="color" />
+
+    <attr name="itemGridTitleColor" format="color" />
+    <attr name="itemGridSubTitleColor" format="color" />
+
+    <declare-styleable name="InfoRowView">
+        <attr name="title" format="string" />
+        <attr name="description" format="string" />
+    </declare-styleable>
+
+</resources>

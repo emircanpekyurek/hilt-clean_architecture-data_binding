@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="character"
+            type="com.pekyurek.emircan.presentation.core.data.model.character.Character" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/material_vertical_list_padding">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCharacterIcon"
+            loadCircleImageFromUrl="@{character.image}"
+            android:layout_width="@dimen/material_vertical_list_item_image_size"
+            android:layout_height="@dimen/material_vertical_list_item_image_size"
+            android:transitionName="@{character.imageTransitionId}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@mipmap/ic_launcher" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCharacterName"
+            style="@style/MaterialVerticalListTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_vertical_list_padding"
+            android:text="@{character.name}"
+            app:layout_constraintBottom_toTopOf="@id/tvCharacterStatus"
+            app:layout_constraintEnd_toStartOf="@id/cbFavorite"
+            app:layout_constraintStart_toEndOf="@id/ivCharacterIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Rick Sanchez" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCharacterStatus"
+            style="@style/MaterialVerticalListSubTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{@string/two_texts_separated_by_commas(character.species, character.status)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cbFavorite"
+            app:layout_constraintStart_toStartOf="@id/tvCharacterName"
+            app:layout_constraintTop_toBottomOf="@id/tvCharacterName"
+            tools:text="Human, Alive" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbFavorite"
+            addOrRemoveCharacterFavorite="@{character.id}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

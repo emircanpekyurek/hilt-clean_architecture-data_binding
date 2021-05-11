@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="androidx.paging.LoadState" />
+
+        <variable
+            name="loadState"
+            type="androidx.paging.LoadState" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/material_vertical_list_padding">
+
+        <ProgressBar
+            android:id="@+id/pbLoadingState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="@{loadState instanceof LoadState.Loading ? View.VISIBLE : View.GONE}" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnErrorState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/label_refresh"
+            android:visibility="@{loadState instanceof LoadState.Error ? View.VISIBLE : View.GONE}" />
+
+    </FrameLayout>
+</layout>

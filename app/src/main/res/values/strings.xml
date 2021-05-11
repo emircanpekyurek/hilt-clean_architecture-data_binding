@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Emircan</string>
+
+
+    <string name="label_name">Name</string>
+    <string name="label_status">Status</string>
+    <string name="label_species">Species</string>
+    <string name="label_episode_count">Episode Count</string>
+    <string name="label_gender">Gender</string>
+    <string name="label_origin_location">Origin Location</string>
+    <string name="label_last_known_location">Last Known Location</string>
+    <string name="label_last_episode_and_air_date">Last Episode And Air Date</string>
+    <string name="label_add_to_favorite">Add to favorite</string>
+    <string name="label_refresh">Yenile</string>
+
+    <string name="two_texts_separated_by_commas">%1$s, %2$s</string>
+
+    <!--menu_main-->
+    <string name="change_view">Change View</string>
+
+    <!--exceptions-->
+    <string name="exception_service_null_response">İçerik Bulunamadı</string>
+    <string name="exception_service_generic_error_message">İşleminiz Gerçekleştirilemedi</string>
+    <string name="exception_service_fail_response_with_status">İşleminiz Gerçekleştirilemedi. Hata Kodu : %1$d</string>
+    <string name="exception_title_generic_error">Hata</string>
+    <string name="exception_title_service_error">Servis Hatası</string>
+
+</resources>

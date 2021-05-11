@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LoadingDialog" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="SingleLineTextView">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!--Material Vertical List-->
+    <style name="MaterialVerticalListTitleStyle" parent="SingleLineTextView">
+        <item name="android:textColor">?attr/itemVerticalTitleColor</item>
+        <item name="android:textSize">@dimen/material_vertical_list_title_font_size</item>
+    </style>
+    <style name="MaterialVerticalListSubTitleStyle" parent="SingleLineTextView">
+        <item name="android:textColor">?attr/itemVerticalSubTitleColor</item>
+        <item name="android:textSize">@dimen/material_vertical_list_subtitle_font_size</item>
+    </style>
+
+    <!--Material Grid List-->
+    <style name="MaterialGridListTitleStyle" parent="SingleLineTextView">
+        <item name="android:textColor">?attr/itemGridTitleColor</item>
+        <item name="android:textSize">@dimen/material_grid_footer_title_font_size</item>
+    </style>
+    <style name="MaterialGridListSubTitleStyle" parent="SingleLineTextView">
+        <item name="android:textColor">?attr/itemGridSubTitleColor</item>
+        <item name="android:textSize">@dimen/material_vertical_list_subtitle_font_size</item>
+    </style>
+
+</resources>

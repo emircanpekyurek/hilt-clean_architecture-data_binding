@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.pekyurek.emircan.presentation.ui.main.characterlist.CharacterListFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_character_list">
+        <action
+            android:id="@+id/action_mainFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailFragment"
+        android:name="com.pekyurek.emircan.presentation.ui.detail.character.CharacterDetailFragment"
+        android:label="CharacterDetailFragment"
+        tools:layout="@layout/fragment_character_detail">
+
+        <argument
+            android:name="arg_character"
+            app:argType="com.pekyurek.emircan.presentation.core.data.model.character.Character"
+            app:nullable="false" />
+
+    </fragment>
+</navigation>
